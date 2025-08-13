@@ -1,4 +1,6 @@
-# ULX3S C64 attempts from mister
+# Icepi Zero C64 attempts from mister
+
+Forked from https://github.com/emard/ulx3s_c64
 
 Attempt to borrow [C64_MiSTer](https://github.com/MiSTer-devel/C64_MiSTer)
 code and compile it with opensource tools.
@@ -25,24 +27,21 @@ PS/2 Keyboard works.
 
 From linux
 
-    make clean
     # to program FPGA, will not persist after power off
-    make prog
+    make
     # to program flash, will persist after power off
-    make flash
+    make install
 
-With doublescan enabled in top module, there are difficulties
-with compiling for 12F. Trellis and Diamond 3.7 won't compile for 12F
-Diamond 3.11 will compile for 25F.
+# Icepi Zero OSD loader
 
-# ESP32 OSD loader
+Install https://github.com/boochow/micropython-raspberrypi to your Pi
 
-Download some PRG files and upload them to ESP32 flash or SD
+Download some PRG files and upload them to a SD
 directory which should contain "c64" string in the path so
 the loader will use correct loader (to make it different from
 VIC20 which also has PRG files).
 
-To start ESP32 OSD service, type or put in main.py
+To start type or put in main.py
 
     import osd
 

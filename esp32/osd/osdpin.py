@@ -9,15 +9,9 @@
 # K1     wifi_gpio12  wifi_gpio12  wifi_gpio12
 
 # v2.1.2 v3.0.x
-gpio_cs   = const(5)
-gpio_sck  = const(16)
-gpio_miso = const(12)
-gpio_mosi = const(4)
-gpio_irq  = const(0)
+gpio_cs   = const(8)
+gpio_sck  = const(11)
+gpio_miso = const(9)
+gpio_mosi = const(10)
+gpio_irq  = const(25)
 
-# v3.1.6 v3.1.7
-#gpio_cs   = const(19)
-#gpio_sck  = const(26)
-#gpio_miso = const(12)
-#gpio_mosi = const(4)
-#gpio_irq  = const(22)

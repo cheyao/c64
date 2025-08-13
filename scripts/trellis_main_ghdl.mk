@@ -109,19 +109,6 @@ VHDL_TO_VERILOG_FILES = $(VHD2VL_FILES:.vhd=.v)
 %.v: %.vhd
 	$(VHDL2VL) $< $@
 
-#*.v: *.vhdl
-#	$(VHDL2VL) $< $@
-
-#$(PROJECT).ys: makefile
-#	$(SCRIPTS)/ysgen.sh $(VERILOG_FILES) $(VHDL_TO_VERILOG_FILES) > $@
-#	echo "hierarchy -top ${TOP_MODULE}" >> $@
-#	echo "synth_ecp5 -noccu2 -nomux -nodram -json ${PROJECT}.json" >> $@
-
-#$(PROJECT).json: $(PROJECT).ys $(VERILOG_FILES) $(VHDL_TO_VERILOG_FILES)
-#	$(YOSYS) $(PROJECT).ys
-
-#	-p "read -vlog2k $(VERILOG_FILES) $(VHDL_TO_VERILOG_FILES)"
-
 $(PROJECT).json: $(VERILOG_FILES) $(VHDL_TO_VERILOG_FILES) $(VHDL_FILES)
 	$(YOSYS) -m ghdl \
 	-p "ghdl --ieee=synopsys --std=08 -fexplicit -frelaxed-rules $(VHDL_FILES) -e $(TOP_MODULE)" \

@@ -1,5 +1,5 @@
 VHDL_FILES = \
-$(TOP_MODULE_FILE) \
+../rtl/top_icepi_zero_c64.vhd \
 ../rtl/ecp5/ecp5pll.vhd \
 ../rtl/cpu_6510.vhd \
 ../rtl/t65/T65.vhd \
