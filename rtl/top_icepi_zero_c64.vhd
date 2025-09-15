@@ -35,7 +35,7 @@ entity top_icepi_zero_c64 is
   );
   port
   (
-    clk_in: in std_logic;  -- main clock input from 25MHz clock source
+    clk_in: in std_logic;  -- main clock input from 50MHz clock source
 
     -- Onboard blinky
     led: out std_logic_vector(4 downto 0);
@@ -377,7 +377,7 @@ end component;
 
 ----------------------------------------------------------
 begin
-  -- esp32 micropython console
+  -- pi zero console
   pi_rx <= usb_rx;
   usb_tx <= usb_rx;
 
